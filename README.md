@@ -6,11 +6,11 @@ Meta-analysis is a **statistical method** for combining results from multiple in
 
 This repository demonstrates how to conduct a **meta-analysis** in R, including both **fixed-effect** and **random-effects** models, and supports estimates such as:
 
-- Regression coefficients (**β**)  
-- **Odds Ratios (OR)**  
-- **Hazard Ratios (HR)**  
-- **Risk Ratios (RR)**  
-- **Mean Differences (MD)** and **Standardized Mean Differences (SMD)**  
+- Regression coefficients (β)  
+- Odds Ratios (OR)
+- Hazard Ratios (HR)
+
+
 
 
 ##  Input Data Format
@@ -19,8 +19,8 @@ Each study should include the following columns:
 
 | Study | Estimate | SE | 
 |--------|-----------|----|
-| Chanock 2020 | 0.45 | 0.12 | 
-| Albert 2021   | 0.38 | 0.09 | 
+| Smith 2020 | 0.45 | 0.12 | 
+| Kim 2021   | 0.38 | 0.09 | 
 | Hong 2022   | 0.60 | 0.15 | 
 
 
