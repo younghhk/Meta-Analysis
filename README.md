@@ -17,29 +17,15 @@ This repository demonstrates how to conduct a **meta-analysis** in R, including 
 
 Each study should include the following columns:
 
-| Study | Estimate | SE | Lower_CI | Upper_CI | Weight |
-|--------|-----------|----|-----------|-----------|---------|
-| Chanock 2020 | 0.45 | 0.12 | 0.21 | 0.69 | 0.10 |
-| Albert 2021   | 0.38 | 0.09 | 0.20 | 0.56 | 0.12 |
-| Hong 2022   | 0.60 | 0.15 | 0.31 | 0.89 | 0.08 |
+| Study | Estimate | SE | 
+|--------|-----------|----|
+| Chanock 2020 | 0.45 | 0.12 | 
+| Albert 2021   | 0.38 | 0.09 | 
+| Hong 2022   | 0.60 | 0.15 | 
 
 
 
-Note: The **Weight** column represents how much influence each study has in the overall pooled estimate.  
-It is determined by the **precision** of each study’s effect size — studies with smaller standard errors (SE) or larger sample sizes receive higher weight.
 
-Formally:
-
-$$
-w_i = \frac{1}{\mathrm{Var}(\hat{\theta}_i)} = \frac{1}{SE_i^2}
-$$
-
-For **fixed-effect models**, all studies are assumed to estimate the same true effect, and weights depend only on sampling variance.  
-For **random-effects models**, the weight is adjusted to account for between-study heterogeneity:
-
-$$w_i^* = \frac{1}{SE_i^2 + \tau^2}$$
-
-where \( \tau^2 \) is the between-study variance.
 
 ##  Model Framework
 
@@ -68,7 +54,7 @@ $$
 with  
 $$w_i^* = \frac{1}{\mathrm{Var}(\theta_i) + \tau^2}$$
 
-where $\tau^2$ represents the **between-study variance** (heterogeneity).  
+where $$\tau^2$$ represents the **between-study variance** (heterogeneity).  
 
 
 ## 🌳 Forest and Funnel Plots
